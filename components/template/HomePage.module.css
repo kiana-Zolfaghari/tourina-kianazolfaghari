@@ -1,0 +1,212 @@
+.banner {
+  background: center / cover no-repeat;
+  width: 129%;
+  height: 20rem;
+  margin-right: -14rem;
+  margin-top: -8px;
+}
+
+.greenBack {
+  display: flex;
+  position: relative;
+}
+.man {
+  position: absolute;
+  top: 10.2%;
+  left: 38%;
+}
+.number {
+  width: 159px;
+  height: 60px;
+}
+.headText {
+  text-align: center;
+  color: #595959;
+  font-size: #595959;
+  font-weight: 600;
+}
+.span1 {
+  color: #28a745;
+  font-size: #595959;
+  font-weight: 600;
+}
+.filterBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 1px #d9d9d9;
+  border-radius: 16px;
+  padding: 0.5rem;
+  width: 55%;
+  margin-right: 25%;
+  margin-top: 40px;
+}
+.filterBar button {
+  margin-left: 20px;
+  border: none;
+  background-color: #28a745;
+  color: #ffff;
+  border-radius: 16px;
+  width: 19%;
+  padding: 13px;
+}
+.filterBar button:hover {
+  background-color: #459d59;
+}
+.filterBar img {
+  cursor: pointer;
+}
+.filterBar img:hover {
+  cursor: pointer;
+}
+.alltours {
+  font-weight: 400;
+  margin-right: 47px;
+  margin-top: 49px;
+  font-size: 32px;
+}
+.greenBack {
+  position: relative;
+  margin-right: 114px;
+  border: solid 1px #d9d9d9;
+  border-radius: 16px;
+  width: 90%;
+}
+.telephonBuy {
+  position: absolute;
+  right: 120px;
+  top: 0px;
+  font-size: 48px;
+  font-weight: 800;
+  color: #fff;
+}
+.telephonBuy span {
+  color: #10411b;
+}
+.where {
+  position: absolute;
+  right: 120px;
+  top: 100px;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 400;
+}
+.greenBack button {
+  border: none;
+  height: 41px;
+  background-color: #10411b;
+  border-radius: 9px;
+  width: 14%;
+  color: #ffff;
+  font-size: 16px;
+  font-weight: 500;
+  position: absolute;
+  top: 137px;
+  left: 123px;
+}
+.number {
+  position: absolute;
+  top: 52px;
+  left: 123px;
+}
+.textsection {
+  position: relative;
+  margin-right: 114px;
+}
+.greenCircle {
+  margin-top: 61px;
+  width: 60px;
+  height: 60px;
+}
+.question {
+  color: #fff;
+  font-size: 47px;
+  font-weight: 900;
+  position: absolute;
+  top: 61px;
+  right: 19px;
+}
+.why {
+  margin-right: 6%;
+  margin-top: -68px;
+  font-size: 40px;
+  font-weight: 800;
+}
+.why span {
+  color: #28a745;
+}
+.textTitle {
+  font-size: 36px;
+  font-weight: 500;
+  color: #282828;
+}
+.discrition {
+  font-size: 20px;
+  font-weight: 400;
+  color: #282828;
+  width: 46%;
+  text-align: justify;
+  word-spacing: 16px;
+}
+.offers {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.child {
+  display: flex;
+  text-align: center;
+  padding: 10px;
+}
+
+.child img {
+  width: 104px;
+  height: 104px;
+}
+
+.child .title1 {
+  margin-right: -2rem;
+  font-size: 26px;
+  font-weight: 500;
+  width: 300px;
+}
+.child .title2 {
+  text-align: right;
+  margin-right: 1rem;
+  font-size: 26px;
+  font-weight: 500;
+  width: 300px;
+}
+.child .title3 {
+  text-align: right;
+  margin-right: 1rem;
+  font-size: 26px;
+  font-weight: 500;
+  width: 300px;
+}
+
+.child .discrition1 {
+  margin-top: 74px;
+  margin-right: -253px;
+  word-spacing: normal;
+  width: 330px;
+  text-align: right;
+}
+.child .discrition2 {
+  margin-top: 74px;
+  margin-right: -304px;
+  word-spacing: normal;
+  width: 330px;
+  text-align: right;
+}
+.child .discrition3 {
+  margin-top: 74px;
+  margin-right: -304px;
+  word-spacing: normal;
+  width: 330px;
+  text-align: right;
+}

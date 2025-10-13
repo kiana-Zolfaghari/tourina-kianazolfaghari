@@ -1,0 +1,35 @@
+.container {
+  position: relative;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 80rem;
+  width: 20%;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 16px;
+  border: 1px solid #444444;
+  height: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.section li {
+  padding: 10px 1px;
+  width: 100%;
+  margin-top: 3px;
+  margin-left: 8rem; 
+}
+.section a{
+  color: #282828;
+}
+
+.active a{
+  color: #28A745;
+}
+
+.section img {
+  position: absolute;
+  right: 35px;
+  margin-top: 10px;
+}

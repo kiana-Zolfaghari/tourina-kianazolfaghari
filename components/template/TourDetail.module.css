@@ -1,0 +1,99 @@
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffff;
+  border-radius: 16px;
+  border: 1px solid #444444;
+  height: 533px;
+  margin: 6rem;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.image{
+  position: absolute;
+  border-radius: 16px;
+  top: 10px;
+  right: 10px;
+}
+
+.boxtitle {
+  position: absolute;
+  font-size: 32px;
+  font-weight: 700;
+  top: 2rem;
+  right: 30rem;
+}
+.duedate {
+  position: absolute;
+  font-size: 20px;
+  font-weight: 400;
+  color: #474747;
+  top: 8rem;
+  right: 30rem;
+}
+.btn {
+  position: absolute;
+  border: none;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 1rem 4rem;
+  border-radius: 10px;
+  left: 3rem;
+  top: 16rem;
+}
+
+.section1 {
+  display: flex;
+  position: absolute;
+  right: 30rem;
+  top: 13rem;
+  gap: 66px;
+  align-items: center;
+  justify-content: center;
+}
+.plans span {
+  color: #7d7d7d;
+  font-size: 20px;
+  font-weight: 400;
+}
+.img1 {
+  position: absolute;
+  left: 29rem;
+}
+.img2 {
+  position: absolute;
+  left: 18rem;
+}
+.img3 {
+  position: absolute;
+  left: 8rem;
+}
+.prices {
+  position: absolute;
+  font-size: 28px;
+  font-weight: 500;
+  color: #009eca;
+  right: 30rem;
+  top: 16rem;
+}
+.prices span {
+  font-size: 14px;
+  color: #282828cc;
+  font-weight: 400;
+}
+.informations img {
+  position: absolute;
+  margin-right: -26px;
+}
+.section2 {
+  display: flex;
+  gap: 67px;
+  margin-top: 25rem;
+  position: relative;
+}
+.tit {
+  color: #444444;
+}

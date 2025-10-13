@@ -1,0 +1,51 @@
+.loginbtn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.loginbtn .btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #28a745;
+  color: #28a745;
+  background-color: #fff;
+  padding: 0.3rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  position: relative;
+  cursor: pointer;
+}
+.mobile{
+    cursor: pointer;
+    padding: 0 28px;
+}
+/* .mobile img {
+position: absolute;
+left: 34rem;
+top: 1.5rem;
+} */
+
+.mobile:hover{
+    border-radius: 8px;
+    color: #28a745;
+    padding: 0 28px;
+}
+
+.user {
+  filter: invert(53%) sepia(78%) saturate(403%) hue-rotate(90deg)
+    brightness(96%) contrast(93%);
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}
+.user:hover {
+  filter: invert(100%);
+}
+
+.loginbtn .btn:hover {
+  background-color: #28a745;
+  color: #ffff;
+}

@@ -1,0 +1,106 @@
+.container {
+  position: relative;
+}
+.sec1 {
+  position: relative;
+  display: flex;
+  width: 75%;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 16px;
+  border: 1px solid #444444;
+  height: 250px;
+  margin-top: 6rem;
+  margin-bottom: 10rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.sec1 img {
+  background-color: #0000;
+  position: absolute;
+  top: 24px;
+  right: 2rem;
+}
+.title1 {
+  position: absolute;
+  font-size: 24px;
+  font-weight: 400;
+  top: -2px;
+  right: 4rem;
+}
+.inputs {
+  position: absolute;
+  margin-top: 25px;
+  display: grid;
+  gap: 35px;
+  width: 100%;
+  grid-template-columns: 30% 30% 30%;
+  margin-right: 20px;
+}
+.inputs .input {
+  padding-right: 20px;
+  height: 50px;
+  outline: none;
+}
+
+.inputs select {
+  height: 50px;
+  padding-right: 20px;
+  outline: none;
+}
+.sec2 {
+  position: absolute;
+  width: 23%;
+  top: 1px;
+  left: 8px;
+  background-color: #f0f0f0;
+  border-radius: 16px;
+  border: 1px solid #444444;
+  height: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.head {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px dashed #444444;
+  padding-right: 10px;
+}
+.title2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.due {
+  margin-right: 135px;
+  font-size: 14px;
+  color: #282828;
+}
+.finalprice {
+  display: flex;
+  margin-right: 10px;
+}
+.finalprice .title {
+  font-size: 14px;
+  color: #282828;
+  margin-top: 26px;
+}
+.price {
+  margin-right: 135px;
+  font-size: 20px;
+  color: #009eca;
+  font-weight: 500;
+}
+.price span {
+  font-size: 10px;
+  color: #282828cc;
+  font-weight: 400;
+}
+.container button {
+  width: calc(100% - 10%);
+  color: #fff;
+  background-color: #28a745;
+  border-radius: 10px;
+  font-size: 24px;
+  height: 50px;
+  border: none;
+  margin-top: 35px;
+  margin-right: 16px;
+}

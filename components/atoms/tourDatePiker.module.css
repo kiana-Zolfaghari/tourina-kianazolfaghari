@@ -1,0 +1,64 @@
+.container {
+    position: relative;
+  }
+  
+  .container input {
+    width: 140%;
+    height: 50px;
+    outline: none;
+    border: none;
+   text-align: center;
+  }
+  
+  .container :global(.rmdp-left),
+  .container :global(.rmdp-right) {
+    background-color: #28a745;
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+  
+  .container :global(.rmdp-arrow) {
+    color: #28a745;
+    font-size: 16px;
+  }
+  
+  /* حالت hover */
+  .container :global(.rmdp-left:hover),
+  .container :global(.rmdp-right:hover) {
+    background-color: #678b6f;
+  }
+  
+  .container :global(.rmdp-left:hover .rmdp-arrow),
+  .container :global(.rmdp-right:hover .rmdp-arrow) {
+    color: #6c9576;
+  }
+  
+  .container :global(.rmdp-day) {
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+  
+  .container :global(.rmdp-day.rmdp-selected span) {
+    background-color: #28a745 !important;
+    color: white !important;
+    border-radius: 8px;
+    /* box-shadow: 0 0 5px rgba(59, 130, 246, 0.4); */
+  }
+  
+  .container :global(.rmdp-day:hover span) {
+    background-color: #73e98e;
+    color: #000000;
+    border-radius: 8px;
+  }
+  
+  .container :global(.rmdp-day.rmdp-today span) {
+    border: 1px solid #28a745;
+    color: #28a745;
+    border-radius: 8px;
+  }
+  

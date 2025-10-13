@@ -1,0 +1,73 @@
+.customDropdown :global(.p-dropdown) {
+    background-color: #f8f9fa;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    color: #333;
+    transition: all 0.2s ease;
+    direction: rtl;
+  
+  }
+  .dropcontainer{
+    display: flex;
+    margin-right: 30px;
+  }
+  
+  
+  /* حالت فوکوس */
+  .customDropdown :global(.p-dropdown.p-focus) {
+    border-color: #28a745;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+  }
+  
+  /* آیکون فلش */
+  .customDropdown :global(.p-dropdown-trigger) {
+    color: #28a745;
+    margin-right: 10px;
+  }
+  
+  .dropdownPanel {
+    background-color: #ffffff;
+    border: 1px solid #28a745;
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    margin-right: 40px;
+  }
+  
+  .dropdownItem {
+    padding: 10px 12px;
+    color: #333;
+    font-size: 14px;
+    transition: background-color 0.15s;
+    cursor: pointer;
+  }
+  
+  .dropdownItem:hover {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .dropdownFilter {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    padding: 6px 10px;
+    font-family: "IRANSans", sans-serif;
+    font-size: 13px;
+    direction: rtl;
+  }
+  
+  .dropdownFilter:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  }
+
+  .customDropdown :global(.p-dropdown-filter-container)::before,
+  .customDropdown :global(.p-dropdown-filter-container)::after {
+    display: none !important;
+    content: none !important;
+  }
+  
+  
