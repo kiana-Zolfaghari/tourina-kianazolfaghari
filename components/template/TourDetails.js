@@ -88,15 +88,21 @@ function TourDetails({ tourDetail }) {
           رزرو و خرید
         </button>
         <section className={styles.section2}>
-          <div className={styles.informations}>
+          <div className={styles.informations} id={styles.part1}>
             <div>
               <Image src="/routing-2.png" alt="icon" width={20} height={20} />
               <span className={styles.tit}>مبدا</span>
             </div>
             <p className={styles.p}>{tourDetail?.origin?.name}</p>
           </div>
-          <Image src="/Line 13.png" alt="icon" width={2} height={64} />
-          <div className={styles.informations}>
+          <Image
+            src="/Line 13.png"
+            alt="icon"
+            width={2}
+            height={64}
+            className={styles.line}
+          />
+          <div className={styles.informations} id={styles.part2}>
             <div>
               <Image
                 src="/calendar (1).png"
@@ -108,8 +114,14 @@ function TourDetails({ tourDetail }) {
             </div>
             <p className={styles.p}> {startDate} </p>
           </div>
-          <Image src="/Line 13.png" alt="icon" width={2} height={64} />
-          <div className={styles.informations}>
+          <Image
+            src="/Line 13.png"
+            alt="icon"
+            width={2}
+            height={64}
+            className={styles.line}
+          />
+          <div className={styles.informations} id={styles.part3}>
             <div>
               <Image
                 src="/calendar (1).png"
@@ -121,7 +133,13 @@ function TourDetails({ tourDetail }) {
             </div>
             <p className={styles.p}> {endDate} </p>
           </div>
-          <Image src="/Line 13.png" alt="icon" width={2} height={64} />
+          <Image
+            src="/Line 13.png"
+            alt="icon"
+            width={2}
+            height={64}
+            className={styles.line}
+          />
           <div className={styles.informations}>
             <div>
               <Image src="/bus (2).png" alt="icon" width={20} height={20} />
@@ -129,7 +147,13 @@ function TourDetails({ tourDetail }) {
             </div>
             <p className={styles.p}>{tourDetail?.fleetVehicle}</p>
           </div>
-          <Image src="/Line 13.png" alt="icon" width={2} height={64} />
+          <Image
+            src="/Line 13.png"
+            alt="icon"
+            width={2}
+            height={64}
+            className={styles.line}
+          />
           <div className={styles.informations}>
             <div>
               <Image
@@ -142,7 +166,13 @@ function TourDetails({ tourDetail }) {
             </div>
             <p className={styles.p}>حداکثر {tourDetail?.availableSeats} نفر</p>
           </div>
-          <Image src="/Line 13.png" alt="icon" width={2} height={64} />
+          <Image
+            src="/Line 13.png"
+            alt="icon"
+            width={2}
+            height={64}
+            className={styles.line}
+          />
           <div className={styles.informations}>
             <div>
               <Image src="/security.png" alt="icon" width={20} height={20} />

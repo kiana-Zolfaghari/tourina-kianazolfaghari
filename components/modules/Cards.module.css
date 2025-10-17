@@ -57,3 +57,11 @@
   font-weight: 400;
   background-color: #28a745;
 }
+@media (max-width: 400px) {
+  .Cardcontainer {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 300px;
+    position: relative;
+  }
+  }

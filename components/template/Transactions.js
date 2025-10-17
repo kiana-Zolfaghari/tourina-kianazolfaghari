@@ -31,7 +31,7 @@ function Transactions({ data }) {
             </>
           ) : (
             <tr style={{ textAlign: "center", marginTop: "30px" }}>
-              <yd> هیچ توری وجود ندارد</yd>
+              <td> هیچ توری وجود ندارد</td>
             </tr>
           )}
         </table>

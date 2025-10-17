@@ -105,3 +105,35 @@
   margin-top: 43px;
   margin-right: 16px;
 }
+@media (max-width: 400px) {
+  .container {
+    position: relative;
+    display: flex;
+   flex-direction: column;
+  }
+  .sec1 {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 25rem;
+    height:32rem;
+    right: 30px;
+  
+  }
+  .sec2 {
+    position: absolute;
+    top: 35rem;
+    width: 100%;
+    right: 30px;
+  }
+  .inputs {
+    position: absolute;
+    margin-top: 25px;
+    display: grid;
+    gap: 35px;
+    width: 100%;
+    grid-template-columns: 90%;
+    margin-right: 20px;
+  }
+  } 

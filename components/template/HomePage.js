@@ -45,12 +45,10 @@ function HomePage({ data, setData }) {
           src="Untitled_design__1_ (1).png"
           alt="banner"
           className={styles.banner}
-        />{" "}
-      </div>{" "}
+        />
+      </div>
       <div className={styles.headtexcont}>
-        {" "}
         <p className={styles.headText}>
-          {" "}
           <span className={styles.span1}>تورینو</span> برگزار کننده بهترین تور
           های داخلی و خارجی
         </p>
@@ -97,18 +95,19 @@ function HomePage({ data, setData }) {
           )}
         </div>
         <div className={styles.greenBack} id="buywithphon">
-          <img src="Rectangle 3.png" alt="man" className={styles.cover} />
-          <img
-            src="professional-cartoon-man-talking-phone-icon-illustration_1151483-70336-removebg-preview 1.png"
-            alt="man"
-            className={styles.man}
-          />
-          <img src="Frame 33.png" alt="man" className={styles.number} />
-          <button>اطلاعات بیشتر</button>
-          <p className={styles.telephonBuy}>
-            خرید تلفی از <span>تورینو</span>
-          </p>
-          <p className={styles.where}>به هرکجا که میخواهید!</p>
+          <div className={styles.box}>
+            <img
+              src="professional-cartoon-man-talking-phone-icon-illustration_1151483-70336-removebg-preview 1.png"
+              alt="man"
+              className={styles.man}
+            />
+            <img src="Frame 33.png" alt="man" className={styles.number} />
+            <button>اطلاعات بیشتر</button>
+            <p className={styles.telephonBuy}>
+              خرید تلفی از <span>تورینو</span>
+            </p>
+            <p className={styles.where}>به هرکجا که میخواهید!</p>
+          </div>
         </div>
         <section className={styles.textsection}>
           <img src="Polygon 1.png" className={styles.greenCircle} />

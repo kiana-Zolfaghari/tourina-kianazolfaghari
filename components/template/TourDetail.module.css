@@ -1,8 +1,8 @@
 .box {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: #ffff;
   border-radius: 16px;
   border: 1px solid #444444;
   height: 533px;
@@ -12,7 +12,7 @@
   width: 100%;
   margin: 4rem auto;
 }
-.image{
+.image {
   position: absolute;
   border-radius: 16px;
   top: 10px;
@@ -49,6 +49,7 @@
 
 .section1 {
   display: flex;
+  flex-wrap: wrap;
   position: absolute;
   right: 30rem;
   top: 13rem;
@@ -92,10 +93,108 @@
 }
 .section2 {
   display: flex;
+  flex-wrap: wrap;
   gap: 56px;
   margin-top: 25rem;
   position: relative;
 }
 .tit {
   color: #444444;
+}
+@media (max-width: 400px) {
+  .box {
+    border: none;
+    width: 100%;
+    box-shadow: none;
+    margin-bottom: 15rem;
+    margin-right: 130px;
+  }
+  .image {
+    top: 10px;
+    right: 9px;
+  }
+  .boxtitle {
+    top: 23rem;
+    right: 1rem;
+    font-size: 24px;
+  }
+  .duedate {
+    font-size: 15px;
+    top: 24rem;
+    right: 19rem;
+  }
+  .btn {
+    position: absolute;
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+    left: 15rem;
+    top: 41rem;
+    padding: 0.5rem 2rem;
+  }
+
+  .section1 {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    right: 3rem;
+    top: 29rem;
+    gap: 50px;
+  }
+  .plans span {
+    color: #7d7d7d;
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .img1 {
+    position: absolute;
+    left: 20rem;
+  }
+  .img2 {
+    position: absolute;
+    left: 12rem;
+  }
+  .img3 {
+    position: absolute;
+    left: 5rem;
+  }
+  .prices {
+    position: absolute;
+    font-size: 14px;
+    right: 13rem;
+    top: 41rem;
+  }
+  .prices span {
+    font-size: 14px;
+    color: #282828cc;
+    font-weight: 400;
+  }
+  .informations img {
+    position: absolute;
+    margin-right: -26px;
+  }
+  .section2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 33rem;
+    position: relative;
+    font-size: 16px;
+  }
+  .informations img {
+    position: absolute;
+    margin-right: -26px;
+  }
+  .line {
+    display: none;
+  }
+  #part1 {
+    display: none;
+  }
+  #part2 {
+    display: none;
+  }
+  #part3 {
+    display: none;
+  }
 }

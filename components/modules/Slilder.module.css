@@ -35,5 +35,23 @@
 .sliderContainer :global(.swiper-pagination-fraction .swiper-pagination-total) {
   color: black;
 }
+@media (max-width: 400px) {
+  .sliderContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 20%;
+    margin-top: 10px;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+  
+  .images {
+    display: flex;
+  }
+  .img1 {
+   margin: auto;
+  }
+  } 
 
 
