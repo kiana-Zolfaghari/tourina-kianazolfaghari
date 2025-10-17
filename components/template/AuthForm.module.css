@@ -19,19 +19,17 @@
   cursor: pointer;
 }
 .mobile{
-    cursor: pointer;
-    padding: 0 28px;
+ display: flex;
+ cursor: pointer;
 }
-/* .mobile img {
-position: absolute;
-left: 34rem;
-top: 1.5rem;
-} */
+.mobile img {
+margin-top: 18px;
+margin-right: -10px;
+}
 
 .mobile:hover{
-    border-radius: 8px;
     color: #28a745;
-    padding: 0 28px;
+    font-weight: 800;
 }
 
 .user {
@@ -49,3 +47,4 @@ top: 1.5rem;
   background-color: #28a745;
   color: #ffff;
 }
+

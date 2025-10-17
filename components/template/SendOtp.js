@@ -1,6 +1,7 @@
 import api from "@/config/config";
 import styles from "./sendOtp.module.css";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 function SendOtp({ setStep, setIsOpen, mobile, setMobile }) {
   const sendeOtp = async () => {
@@ -9,10 +10,11 @@ function SendOtp({ setStep, setIsOpen, mobile, setMobile }) {
         mobile,
       };
       const res = await api.post("/auth/send-otp", data);
-      const massage = res.massage;
+      toast.success("کد اعتبارسنجی ارسال شد.");
+      toast(res.data.code);
       setStep(2);
     } catch (err) {
-      console.log(err);
+      toast.error("مشکلی پیش آمده");
     }
   };
 

@@ -1,26 +1,26 @@
-import React, { useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import ModalContainer from "../partials/provider/ModalContainer";
 import Image from "next/image";
 import styles from "./AuthForm.module.css";
 import SendOtp from "./SendOtp";
 import CheckOtp from "./CheckOtp";
+import { useContext } from "react";
+import { DialogContext } from "../partials/provider/DialogProdider";
+// import { getCookie } from "@/core/utils/cookie";
+import Cookies from "js-cookie";
+import UserPane from "../atoms/UserPane";
 
 function AuthForm() {
+  const { setIsOpen, isOpen } = useContext(DialogContext);
   const [step, setStep] = useState(1);
-  const [isOpen, setIsOpen] = useState(false);
   const [mobile, setMobile] = useState("");
-  const [isLogin, setIsLogin] = useState(false);
-  const [userData, setUserData] = useState("");
+  const [isLogin, setIsLogin] = useState(null);
+  const [openpanel, setOpenPanel] = useState(false);
 
-  const checkLogin = () => {
-    const token = localStorage.getItem("accessToken");
-    console.log(token);
-    if (token) {
-      setIsLogin(true);
-    }
-  };
-
-  console.log(userData);
+  useEffect(() => {
+    const userData = Cookies.get("userData");
+    setIsLogin(userData);
+  }, [isOpen, isLogin]);
 
   return (
     <div>
@@ -36,7 +36,25 @@ function AuthForm() {
                 color="#28A745"
               />
             </span>
-            <p>{userData}</p>
+            <span className={styles.arrowDown}>
+              {/* <Image
+                src="/arrow-down.png"
+                alt="torino logo"
+                width={15}
+                height={15}
+                color="#28A745"
+              /> */}
+            </span>
+            <p onClick={() => setOpenPanel((prev) => !prev)}>{isLogin}</p>
+            <div>
+              {openpanel && (
+                <UserPane
+                  isLogin={isLogin}
+                  setIsLogin={setIsLogin}
+                  setOpenPanel={setOpenPanel}
+                />
+              )}
+            </div>
           </div>
         ) : (
           <button className={styles.btn} onClick={() => setIsOpen(true)}>
@@ -70,8 +88,6 @@ function AuthForm() {
             mobile={mobile}
             setMobile={setMobile}
             setIsOpen={setIsOpen}
-            userData={userData}
-            setUserData={setUserData}
           />
         </ModalContainer>
       )}

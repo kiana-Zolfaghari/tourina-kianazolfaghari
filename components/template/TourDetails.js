@@ -4,15 +4,32 @@ import Link from "next/link";
 import { chageDate } from "../partials/provider/jalali";
 import api from "@/config/config";
 import { useRouter } from "next/router";
+import toast from "react-hot-toast";
+import { getToken } from "@/core/utils/cookie";
+import { useContext } from "react";
+import { DialogContext } from "../partials/provider/DialogProdider";
 
 function TourDetails({ tourDetail }) {
+  const { setIsOpen, isOpen } = useContext(DialogContext);
   const startDate = chageDate(tourDetail?.startDate);
   const endDate = chageDate(tourDetail?.endDate);
   const { push } = useRouter();
 
   const addTobasket = (id) => {
-    api.put(`/basket/${id}`);
-    push("/checkout");
+    const token = getToken("accessToken");
+    if (!token) {
+      toast.error("!برای خرید و رزرو تور وارد پنل کاربری خود شوید");
+      setIsOpen(true);
+      return;
+    }
+
+    api
+      .put(`/basket/${id}`)
+      .then((res) => {
+        toast.success(res.data.message);
+        push("/checkout");
+      })
+      .catch((err) => toast.error("مشکلی پیش آمده"));
   };
 
   return (

@@ -1,3 +1,6 @@
+"use client";
+import Cookies from "js-cookie";
+
 const setToken = (tokens) => {
   if (tokens.accessToken) {
     localStorage.setItem("accessToken", tokens.accessToken);
@@ -16,7 +19,20 @@ const clearTokens = () => {
   localStorage.removeItem("refreshToken");
 };
 
-export { setToken, getToken, clearTokens };
+const setCookie = (name) => {
+  Cookies.set("userData", name, {
+    expires: 7,
+    path: "/",
+    secure: true,
+    sameSite: "strict",
+  });
+};
+
+const getCookie = (name) => {
+  const mobile = Cookies.get(name);
+};
+
+export { setToken, getToken, clearTokens, setCookie, getCookie };
 
 // const setCookie = (tokens) => {
 //   document.cookie = `accessToken=${tokens.accessToken}; max-age=${

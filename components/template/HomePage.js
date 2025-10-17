@@ -6,7 +6,7 @@ import styles from "./HomePage.module.css";
 import Cards from "../modules/Cards";
 import ImageSlider from "../modules/Slider";
 import TourDatePiker from "../atoms/tourDatePiker";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import api from "@/config/config";
 import { useRouter } from "next/router";
 import DropDown from "../atoms/DropDown";
@@ -22,7 +22,7 @@ function HomePage({ data, setData }) {
 
   const filterHandeler = async () => {
     const res =
-      await api.get(`/tour?destinationId=9&originId=1&startDate=${startDate}&endDate=${endDate}
+      await api.get(`/tour?destinationId=${destination.id}&originId=${origin.id}&startDate=${startDate}&endDate=${endDate}
 `);
     setData(res.data);
 
@@ -45,12 +45,16 @@ function HomePage({ data, setData }) {
           src="Untitled_design__1_ (1).png"
           alt="banner"
           className={styles.banner}
-        />
+        />{" "}
+      </div>{" "}
+      <div className={styles.headtexcont}>
+        {" "}
+        <p className={styles.headText}>
+          {" "}
+          <span className={styles.span1}>تورینو</span> برگزار کننده بهترین تور
+          های داخلی و خارجی
+        </p>
       </div>
-      <p className={styles.headText}>
-        <span className={styles.span1}>تورینو</span> برگزار کننده بهترین تور های
-        داخلی و خارجی
-      </p>
       <div className={styles.filterBar}>
         <div>
           <DropDown origin={origin} setOrigin={setOrigin} />
@@ -70,7 +74,9 @@ function HomePage({ data, setData }) {
         <button onClick={() => filterHandeler()}>جست و جو</button>
       </div>
       <div>
-        <p className={styles.alltours}>همه تور ها</p>
+        <p className={styles.alltours} id="allTours">
+          همه تور ها
+        </p>
         <div>
           {data.length > 0 ? (
             <Cards data={data} />
@@ -90,7 +96,7 @@ function HomePage({ data, setData }) {
             </p>
           )}
         </div>
-        <div className={styles.greenBack}>
+        <div className={styles.greenBack} id="buywithphon">
           <img src="Rectangle 3.png" alt="man" className={styles.cover} />
           <img
             src="professional-cartoon-man-talking-phone-icon-illustration_1151483-70336-removebg-preview 1.png"
@@ -107,7 +113,7 @@ function HomePage({ data, setData }) {
         <section className={styles.textsection}>
           <img src="Polygon 1.png" className={styles.greenCircle} />
           <span className={styles.question}>؟</span>
-          <p className={styles.why}>
+          <p className={styles.why} id="aboutUs">
             چرا <span>تورینو</span> ؟
           </p>
           <p className={styles.textTitle}>تور طبیعت گردی و تاریخی </p>
@@ -132,8 +138,7 @@ function HomePage({ data, setData }) {
           </p>
         </div>
         <div className={styles.child}>
-          <img src="Group 17.png" />
-          <p className={styles.title2}> پشتیبانی </p>
+          <img src="Group 17.png" /> <p className={styles.title2}> پشتیبانی </p>
           <p className={styles.discrition2}>
             پشتیبانی و همراهی 24 ساعته در تمامی مراحل سفر شما.
           </p>

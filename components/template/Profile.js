@@ -5,6 +5,7 @@ import { useState } from "react";
 import { changeToMiladi, shamsiDate } from "../partials/provider/jalali";
 import DatePickers from "../atoms/DatePicker";
 import api from "@/config/config";
+import toast from "react-hot-toast";
 
 function Profile({ profiledData, getPrifileData }) {
   const [isEdit, setIsEdit] = useState(false);
@@ -34,8 +35,10 @@ function Profile({ profiledData, getPrifileData }) {
         accountIdentifier: accountIdentifier,
       },
     };
-    const res = api.put("/user/profile", data);
-    const massage = res.massage;
+    const res = api
+      .put("/user/profile", data)
+      .then((res) => toast.success(res.data.message))
+      .catch((err) => toast.error("مشکلی پیش آمده"));
   };
 
   return (

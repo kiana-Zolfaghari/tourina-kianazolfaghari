@@ -5,6 +5,7 @@ import { changeToMiladi, shamsiDate } from "../partials/provider/jalali";
 import DatePickers from "../atoms/DatePicker";
 import api from "@/config/config";
 import { useRouter } from "next/router";
+import toast from "react-hot-toast";
 
 function CheckoutPage({ data }) {
   const [birthday, setBirthday] = useState("");
@@ -12,13 +13,12 @@ function CheckoutPage({ data }) {
   const [name, setName] = useState("");
   const [idCode, setIdCode] = useState();
   const [gender, setGender] = useState("");
-  const [errMasaage, setErrMassage] = useState("");
 
   const { push } = useRouter();
 
   const buyTourhandeler = async () => {
     if (name == "" || gender == "" || idCode == "" || birthday == "") {
-      setErrMassage("مشخصات فردی خود را تکمیل کنید!");
+      toast.error("مشخصات فردی خود را تکمیل کنید!");
       return;
     }
 
@@ -30,10 +30,10 @@ function CheckoutPage({ data }) {
         birthDate: changeToMiladi(birthday),
       });
 
-      const massage = res.massage;
+      toast.success(res.data.message);
       push("/mytours");
     } catch (err) {
-      console.log(err);
+      toast.error("مشکلی پیش آمده!");
     }
   };
 
@@ -85,17 +85,6 @@ function CheckoutPage({ data }) {
         </div>
         <button onClick={buyTourhandeler}>ثبت و خرید نهایی</button>
       </section>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          background: "red",
-          borderRadius: "10px",
-          color: "#ffffF",
-        }}
-      >
-        {errMasaage && <p>{errMasaage}</p>}
-      </div>
     </div>
   );
 }

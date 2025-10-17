@@ -1,27 +1,6 @@
 import TourDetails from "@/components/template/TourDetails";
-import api from "@/config/config";
-import { useRouter } from "next/router";
-// import { notFound } from "next/navigation";
-import React, { useEffect, useState } from "react";
 
-function Index() {
-  const router = useRouter();
-
-  const [tourDetail, setTourDetail] = useState();
-
-  useEffect(() => {
-    const fetchBasket = async () => {
-      try {
-        const res = await api.get(`/tour/${router.query.tourId}`);
-
-        setTourDetail(res?.data);
-      } catch (err) {
-        console.error("Error fetching basket:", err);
-      }
-    };
-    fetchBasket();
-  }, []);
-
+function Index({ tourDetail }) {
   return (
     <div>
       <TourDetails tourDetail={tourDetail} />
@@ -31,29 +10,30 @@ function Index() {
 
 export default Index;
 
-// export async function getStaticPaths() {
-//   const res = await api.get("/tour");
-//   const json = res.data;
-//   const data = json.slice(0, 10);
+export async function getStaticPaths() {
+  const res = await fetch("http://localhost:6500/tour");
+  const json = await res.json();
 
-//   const paths = data.map((i) => ({ params: { tourId: i.id.toString() } }));
+  const data = json?.slice(0, 3);
 
-//   return {
-//     paths,
-//     fallback: true,
-//   };
-// }
+  const paths = data?.map((i) => ({ params: { tourId: i.id.toString() } }));
 
-// export async function getStaticProps(context) {
-//   const { params } = context;
+  return {
+    paths,
+    fallback: true,
+  };
+}
 
-//   const res = await api.get(`/tour/${params.tourId}`);
-//   const tourDetail = res.data;
+export async function getStaticProps(context) {
+  const { params } = context;
 
-//   return {
-//     props: {
-//       tourDetail,
-//     },
-//     revalidate: 360,
-//   };
-// }
+  const res = await fetch(`http://localhost:6500/tour/${params.tourId}`);
+  const tourDetail = await res.json();
+
+  return {
+    props: {
+      tourDetail,
+    },
+    revalidate: 360,
+  };
+}

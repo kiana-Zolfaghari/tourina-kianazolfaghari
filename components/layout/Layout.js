@@ -1,13 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Layout.module.css";
-import { useEffect, useState } from "react";
+
 import AuthForm from "../template/AuthForm";
-import { getCookie } from "@/core/utils/cookie";
 
 function Layout({ children }) {
-  // const [isLogin, setIsLogin] = useState(false);
-
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -23,26 +20,18 @@ function Layout({ children }) {
         <div className={styles.navbar}>
           <ul>
             <li className={styles.home}>صفحه اصلی</li>
-            <li>خدمات گردشگری</li>
-            <li>درباره ما</li>
-            <li>تماس با ما</li>
+            <li>
+              <Link href="/home#allTours">خدمات گردشگری </Link>
+            </li>
+            <li>
+              <Link href="/home#aboutUs">درباره ما</Link>
+            </li>
+            <li>
+              <Link href="/home#buywithphon"> تماس با ما </Link>{" "}
+            </li>
           </ul>
         </div>
         <AuthForm />
-        {/* <div className={styles.loginbtn}>
-          <button className={styles.btn} onClick={setIsOpen(true)}>
-            <span className={styles.user}>
-              <Image
-                src="/user-tick.png"
-                alt="torino logo"
-                width={15}
-                height={15}
-                color="#28A745"
-              />
-            </span>
-            ورود | ثبت نام
-          </button>
-        </div> */}
       </header>
       <hr className={styles.hr} />
       {children}
@@ -77,7 +66,7 @@ function Layout({ children }) {
           </div>
         </div>
         <div className={styles.phone}>
-          <p>
+          <p className={styles.p}>
             تلفن پشتیبانی: <span>021-8574</span>
           </p>
         </div>

@@ -3,16 +3,16 @@ import api from "@/config/config";
 
 import { useEffect, useState } from "react";
 
-function Home() {
-  const [data, setData] = useState([]);
+function Home({ tours }) {
+  const [data, setData] = useState(tours);
 
-  useEffect(() => {
-    const get = async () => {
-      const res = await api.get("/tour");
-      setData(res.data);
-    };
-    get();
-  }, []);
+  // useEffect(() => {
+  //   const get = async () => {
+  //     const res = await api.get("/tour");
+  //     setData(res.data);
+  //   };
+  //   get();
+  // }, []);
 
   return (
     <>
@@ -23,13 +23,13 @@ function Home() {
 
 export default Home;
 
-// export async function getStaticProps() {
-//   const res = await api.get("/tour");
-//   const data = res?.data || null;
-//   return {
-//     props: {
-//       data,
-//     },
-//     revalidate: 600,
-//   };
-// }
+export async function getStaticProps() {
+  const res = await fetch("http://localhost:6500/tour");
+  const tours = await res.json();
+  return {
+    props: {
+      tours,
+    },
+    revalidate: 600,
+  };
+}

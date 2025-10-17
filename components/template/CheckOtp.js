@@ -3,9 +3,13 @@ import { useState } from "react";
 import styles from "./checkOtp.module.css";
 import { InputOtp } from "primereact/inputotp";
 import api from "@/config/config";
-import { setToken } from "@/core/utils/cookie";
+import { setCookie, setToken } from "@/core/utils/cookie";
+import toast from "react-hot-toast";
+import { useContext } from "react";
+import { DialogContext } from "../partials/provider/DialogProdider";
 
-function CheckOtp({ setStep, mobile, setIsOpen, userData, setUserData }) {
+function CheckOtp({ setStep, mobile }) {
+  const { setIsOpen, isOpen } = useContext(DialogContext);
   const [code, setCode] = useState("");
 
   const login = async () => {
@@ -19,11 +23,11 @@ function CheckOtp({ setStep, mobile, setIsOpen, userData, setUserData }) {
 
       if (res) {
         setToken(res.data);
+        setCookie(res.data.user.mobile);
         setIsOpen(false);
-        setUserData(res.data.user.mobile);
       }
     } catch (err) {
-      console.log(err);
+      toast.error("کد وارد شده فاقد اعتبار است!");
     }
   };
 
@@ -34,7 +38,12 @@ function CheckOtp({ setStep, mobile, setIsOpen, userData, setUserData }) {
         مرحله قبل
       </span>
       <label>کد تایید به شماره {mobile} ارسال شد</label>
-      <InputOtp value={code} onChange={(e) => setCode(e.value)} length={6} />
+      <InputOtp
+        value={code}
+        onChange={(e) => setCode(e.value)}
+        length={6}
+        style={{ direction: "ltr", justifyContent: "flex-start" }}
+      />
       <button onClick={login}> ورود به تورینو </button>
     </div>
   );

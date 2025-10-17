@@ -9,6 +9,8 @@
   margin: 6rem;
   position: relative;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  margin: 4rem auto;
 }
 .image{
   position: absolute;
@@ -90,7 +92,7 @@
 }
 .section2 {
   display: flex;
-  gap: 67px;
+  gap: 56px;
   margin-top: 25rem;
   position: relative;
 }
