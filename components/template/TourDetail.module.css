@@ -14,7 +14,8 @@
   margin: 4rem auto;
 }
 .image {
-  justify-content: center;
+  margin-left: auto;
+  margin-top: -29px;
 }
 
 .boxtitle {
@@ -93,7 +94,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 56px;
-  margin-top: 25rem;
   position: relative;
 }
 .tit {
