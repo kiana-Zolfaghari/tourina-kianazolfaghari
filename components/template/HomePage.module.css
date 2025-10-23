@@ -7,7 +7,6 @@
 
 .imgContainer img {
   width: 100%;
-
 }
 .man {
   position: absolute;
@@ -38,7 +37,7 @@
   flex-direction: column;
   align-items: center;
 }
-.filterBarcontain{
+.filterBarcontain {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,7 +93,7 @@
 }
 
 .box {
-  background-color: #28A745;
+  background-color: #28a745;
   width: 70%;
   height: 16rem;
   border-radius: 16px;
@@ -203,7 +202,6 @@
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-
 }
 
 .child img {
@@ -213,13 +211,13 @@
 .child .title1 {
   font-size: 26px;
   font-weight: 500;
+  text-align: start;
 }
 
 .child .title2 {
   text-align: right;
   font-size: 26px;
   font-weight: 500;
-
 }
 
 .child .title3 {
@@ -249,7 +247,7 @@
   }
   .filterBar {
     display: flex;
-    
+
     justify-content: center;
     align-items: end;
     border: none;
@@ -263,9 +261,9 @@
     margin-top: 10px;
   }
   .textTitle {
-  display: none;
+    display: none;
   }
-  
+
   .discrition {
     display: none;
   }
@@ -284,14 +282,14 @@
     width: 100%;
     height: 350px;
   }
-  
+
   .box {
-    background-color: #28A745;
+    background-color: #28a745;
     width: 100%;
     height: 16rem;
     border-radius: 16px;
   }
-  .man{
+  .man {
     position: absolute;
     top: 9.2%;
     left: 1%;
@@ -304,7 +302,7 @@
     font-weight: 800;
     color: #fff;
   }
-  .where{
+  .where {
     position: absolute;
     right: 010px;
     top: 63px;
@@ -329,5 +327,40 @@
     position: absolute;
     top: 17rem;
     left: 53%;
+  }
+  .child .title1 {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: start;
+  }
+
+  .child .title2 {
+    text-align: right;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .child .title3 {
+    text-align: right;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .child .discrition1 {
+    word-spacing: normal;
+    text-align: right;
+  }
+
+  .child .discrition2 {
+    word-spacing: normal;
+    text-align: right;
+  }
+
+  .child .discrition3 {
+    word-spacing: normal;
+    text-align: right;
+  }
+  .child img {
+    height: 70px;
   }
 }

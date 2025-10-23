@@ -140,24 +140,30 @@ function HomePage({ data, setData }) {
         <div className={styles.offers}>
           <div className={styles.child}>
             <img src="Group 16.png" />
-            <p className={styles.title1}>بصرفه ترین قیمت</p>
-            <p className={styles.discrition1}>
-              بصرفه ترین و ارزان ترین قیمت تور را از ما بخواهید.
-            </p>
+            <div>
+              <p className={styles.title1}>بصرفه ترین قیمت</p>
+              <p className={styles.discrition1}>
+                بصرفه ترین و ارزان ترین قیمت تور را از ما بخواهید.
+              </p>
+            </div>
           </div>
           <div className={styles.child}>
             <img src="Group 17.png" />{" "}
-            <p className={styles.title2}> پشتیبانی </p>
-            <p className={styles.discrition2}>
-              پشتیبانی و همراهی 24 ساعته در تمامی مراحل سفر شما.
-            </p>
+            <div>
+              <p className={styles.title2}> پشتیبانی </p>
+              <p className={styles.discrition2}>
+                پشتیبانی و همراهی 24 ساعته در تمامی مراحل سفر شما.
+              </p>
+            </div>
           </div>
           <div className={styles.child}>
             <img src="Group 18.png" />
-            <p className={styles.title3}> رضایت کاربران </p>
-            <p className={styles.discrition3}>
-              رضایت بیش از 10هزار کاربر از تور های ما.
-            </p>
+            <div>
+              <p className={styles.title3}> رضایت کاربران </p>
+              <p className={styles.discrition3}>
+                رضایت بیش از 10هزار کاربر از تور های ما.
+              </p>
+            </div>
           </div>
         </div>
       </div>
