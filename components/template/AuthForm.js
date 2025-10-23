@@ -9,6 +9,7 @@ import { DialogContext } from "../partials/provider/DialogProdider";
 // import { getCookie } from "@/core/utils/cookie";
 import Cookies from "js-cookie";
 import UserPane from "../atoms/UserPane";
+import { getToken } from "@/core/utils/cookie";
 
 function AuthForm() {
   const { setIsOpen, isOpen } = useContext(DialogContext);
@@ -19,7 +20,8 @@ function AuthForm() {
 
   useEffect(() => {
     const userData = Cookies.get("userData");
-    setIsLogin(userData);
+    const token = getToken("accessToken");
+    if (userData && token) setIsLogin(userData);
   }, [isOpen, isLogin]);
 
   return (
@@ -36,16 +38,16 @@ function AuthForm() {
                 color="#28A745"
               />
             </span>
+            <p onClick={() => setOpenPanel((prev) => !prev)}>{isLogin}</p>
             <span className={styles.arrowDown}>
-              {/* <Image
+              <Image
                 src="/arrow-down.png"
                 alt="torino logo"
                 width={15}
                 height={15}
                 color="#28A745"
-              /> */}
+              />
             </span>
-            <p onClick={() => setOpenPanel((prev) => !prev)}>{isLogin}</p>
             <div>
               {openpanel && (
                 <UserPane

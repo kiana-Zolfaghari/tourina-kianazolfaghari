@@ -19,13 +19,15 @@ function Layout({ children }) {
           width={26}
           height={26}
         />
-        <Image
-          className={styles.image}
-          src="/TorinoLogo.png"
-          alt="torino logo"
-          width={146}
-          height={44}
-        />
+        <Link href="/home">
+          <Image
+            className={styles.image}
+            src="/TorinoLogo.png"
+            alt="torino logo"
+            width={146}
+            height={44}
+          />
+        </Link>
         <div className={styles.navbar}>
           <ul>
             <li className={styles.home}>صفحه اصلی</li>

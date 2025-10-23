@@ -176,7 +176,7 @@
   left: 11.5rem;
   top: 1.25rem;
 }
-@media (max-width: 400px) {
+@media (max-width: 410px) {
   .section1 {
     width: 100%;
     position: relative;

@@ -27,8 +27,8 @@ function HomePage({ data, setData }) {
     setData(res.data);
 
     const query = {
-      originId: "1",
-      destinationId: "9",
+      originId: origin,
+      destinationId: destination,
       startDate: changeToMiladi(startDate),
       endDate: changeToMiladi(endDate),
     };

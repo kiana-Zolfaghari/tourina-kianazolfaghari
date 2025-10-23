@@ -34,6 +34,10 @@ margin-right: -10px;
     color: #28a745;
     font-weight: 800;
 }
+.arrowDown img{
+  margin-right: 5px;
+  margin-top: 21px;
+}
 
 .user {
   filter: invert(53%) sepia(78%) saturate(403%) hue-rotate(90deg)
