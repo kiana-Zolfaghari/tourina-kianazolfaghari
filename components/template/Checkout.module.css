@@ -105,7 +105,7 @@
   margin-top: 43px;
   margin-right: 16px;
 }
-@media (max-width: 400px) {
+@media (max-width: 410px) {
   .container {
     position: relative;
     display: flex;

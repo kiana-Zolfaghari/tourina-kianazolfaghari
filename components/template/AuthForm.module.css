@@ -50,7 +50,7 @@ margin-right: -10px;
   background-color: #28a745;
   color: #ffff;
 }
-@media (max-width: 400px) {
+@media (max-width: 410px) {
   .loginbtn .btn {
    display: none;
   }

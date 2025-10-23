@@ -1,15 +1,14 @@
-/* .Cardcontainer{
-    width: 100%;
-} */
 .Cardcontainer {
   justify-content: center;
-display: flex;
-flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
 }
-.Cardcontainer img{
+.Cardcontainer img {
   margin-right: 0px;
   object-fit: cover;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 .cards {
   border: solid 1px #d9d9d9;
@@ -59,4 +58,4 @@ flex-wrap: wrap;
   .cards {
     margin: 14px 8px;
   }
-  }
+}

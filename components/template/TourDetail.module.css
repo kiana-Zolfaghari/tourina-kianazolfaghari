@@ -99,7 +99,7 @@
 .tit {
   color: #444444;
 }
-@media (max-width: 400px) {
+@media (max-width: 410px) {
   .box {
     border: none;
     width: 100%;

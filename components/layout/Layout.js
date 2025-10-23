@@ -114,7 +114,7 @@ function Layout({ children }) {
         </div>
         <hr className={styles.hr2} />
         <div className={styles.p}>
-          <p>کلیه حقوق این وب سایت متعلق به تورینو میباشد.</p>
+          <p>کلیه حقوق این وب سایت متعلق به تورینو میباشد.&copy; </p>
         </div>
       </footer>
     </div>

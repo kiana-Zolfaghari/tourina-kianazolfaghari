@@ -5,6 +5,15 @@ import toast from "react-hot-toast";
 
 function SendOtp({ setStep, setIsOpen, mobile, setMobile }) {
   const sendeOtp = async () => {
+    if (!mobile) {
+      toast.error("شماره موبایل خود را وارد کنید");
+      return;
+    }
+    if (mobile.length < 9) {
+      toast.error("لطفا یک شماره موبایل معتبر را وارد کنید!");
+      return;
+    }
+
     try {
       const data = {
         mobile,

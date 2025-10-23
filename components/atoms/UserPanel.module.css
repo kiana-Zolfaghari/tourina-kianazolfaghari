@@ -16,11 +16,11 @@
   flex-direction: column;
   position: absolute;
   margin-top: 3.5rem;
-  left: 15%;
+  left: 6px;
   background-color: #ffff;
   border: solid 1px #d8d8dd;
   border-radius: 10px;
-  width: 11%;
+  width: 14%;
   z-index: 40;
   animation: zoomInDown 0.3s ease-out forwards;
 }
@@ -32,7 +32,7 @@
 .logOut{
   color: red !important;
 }
-@media (max-width: 400px) {
+@media (max-width: 410px) {
   .container {
     display: flex;
     flex-direction: column;
