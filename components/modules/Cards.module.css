@@ -3,21 +3,19 @@
 } */
 .Cardcontainer {
   justify-content: center;
-  display: grid;
-  grid-template-columns: 300px 300px 300px 300px;
-  gap: 40px;
+display: flex;
+flex-wrap: wrap;
   position: relative;
 }
 .Cardcontainer img{
   margin-right: 0px;
-  width: 100%;
+  object-fit: cover;
 }
 .cards {
   border: solid 1px #d9d9d9;
   height: 329px;
-  width: 100%;
   border-radius: 20px;
-  margin: 50px;
+  margin: 50px 8px;
 }
 .title {
   margin-right: 20px;
@@ -58,10 +56,7 @@
   background-color: #28a745;
 }
 @media (max-width: 400px) {
-  .Cardcontainer {
-    justify-content: center;
-    display: grid;
-    grid-template-columns: 300px;
-    position: relative;
+  .cards {
+    margin: 14px 8px;
   }
   }

@@ -178,23 +178,26 @@
 }
 @media (max-width: 400px) {
   .section1 {
-    margin-right: 10rem;
     width: 100%;
     position: relative;
     height: 10rem;
+    margin: auto;
+    margin-top: 50px;
   }
   .section2 {
     position: relative;
-    margin-right: 10rem;
     width: 100%;
     height: 30rem;
     position: relative;
+    margin: auto;
+    margin-top: 10px;
   }
   .section3 {
     position: relative;
-    margin-right: 10rem;
     width: 100%;
     height: 30rem;
+    margin: auto;
+    margin-top: 10px;
   }
   .add {
     position: absolute;
@@ -259,8 +262,7 @@
       margin-top: 25px;
       display: grid;
       gap: 35px;
-      width: 274%;
-      grid-template-columns: 30%;
+      grid-template-columns: 80%;
       margin-right: 20px;
     }
     .inputs input {
@@ -270,7 +272,7 @@
     }
     .cancelBtn{
       position: absolute;
-      left: 7rem;
+      left: 1rem;
       top: 26rem;
       color: #28A745;
       border: #28A745 solid 1px;
@@ -280,7 +282,7 @@
     }
     .acceptbtns{
       position: absolute;
-      left: 16rem;
+      left: 13rem;
       top: 26rem;
       color: #ffff;
       border: none;

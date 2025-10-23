@@ -10,31 +10,53 @@ function NavBox() {
   return (
     <div className={styles.container}>
       <div className={styles.section}>
-        <ul>
-          <Image src="/profile-2user.png" alt="icon" width={20} height={20} />
-          <li
+        <div className={styles.flex}>
+          <Image
+            src="/profile-2user.png"
+            alt="icon"
+            width={20}
+            height={20}
+            className={styles.img3}
+          />
+          <div
             onClick={() => setValue("profile")}
             className={value === "profile" ? styles.active : null}
           >
             <Link href="/profile">پروفایل</Link>
-          </li>
-          <hr />
-          <Image src="/sun-fog.png" alt="icon" width={20} height={20} />
-          <li
+          </div>
+        </div>
+
+        <div className={styles.flex}>
+          <Image
+            src="/sun-fog.png"
+            alt="icon"
+            width={20}
+            height={20}
+            className={styles.img1}
+          />
+          <div
             onClick={() => setValue("mytours")}
             className={value === "mytours" ? styles.active : null}
           >
             <Link href="/mytours">تور های من</Link>
-          </li>
-          <hr />
-          <Image src="/convert-card.png" alt="icon" width={20} height={20} />
-          <li
+          </div>
+        </div>
+
+        <div className={styles.flex}>
+          <Image
+            src="/convert-card.png"
+            alt="icon"
+            width={20}
+            height={20}
+            className={styles.img2}
+          />
+          <div
             onClick={() => setValue("transactions")}
             className={value === "transactions" ? styles.active : null}
           >
             <Link href="/transactions">تراکنش ها</Link>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </div>
   );

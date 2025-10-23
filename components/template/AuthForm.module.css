@@ -18,6 +18,9 @@
   position: relative;
   cursor: pointer;
 }
+.resLogo{
+  display: none;
+}
 .mobile{
  display: flex;
  cursor: pointer;
@@ -47,4 +50,11 @@ margin-right: -10px;
   background-color: #28a745;
   color: #ffff;
 }
-
+@media (max-width: 400px) {
+  .loginbtn .btn {
+   display: none;
+  }
+  .resLogo{
+    display: block;
+  }
+}

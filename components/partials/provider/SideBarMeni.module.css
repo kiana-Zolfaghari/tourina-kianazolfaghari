@@ -1,0 +1,23 @@
+.container {
+  background-color: #ffff;
+  width: 40%;
+  display: none;
+}
+@media (max-width: 400px) {
+  .container {
+    position: relative;
+    background-color: #ffff;
+    width: 68%;
+    z-index: 10;
+    display: block;
+    height: 212vh;
+    left: 7rem;
+  }
+  .container ul{
+    position: absolute;
+    z-index: 30;
+  }
+  .container a {
+ color: #8e8e8e;
+  }
+}

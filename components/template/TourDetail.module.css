@@ -1,3 +1,4 @@
+
 .box {
   display: flex;
   flex-wrap: wrap;
@@ -13,10 +14,7 @@
   margin: 4rem auto;
 }
 .image {
-  position: absolute;
-  border-radius: 16px;
-  top: 10px;
-  right: 10px;
+  justify-content: center;
 }
 
 .boxtitle {
@@ -106,12 +104,10 @@
     border: none;
     width: 100%;
     box-shadow: none;
-    margin-bottom: 15rem;
-    margin-right: 130px;
   }
   .image {
-    top: 10px;
-    right: 9px;
+    position: absolute;
+    top:0px;
   }
   .boxtitle {
     top: 23rem;
@@ -128,10 +124,11 @@
     border: none;
     font-size: 20px;
     font-weight: 400;
-    left: 15rem;
-    top: 41rem;
-    padding: 0.5rem 2rem;
-  }
+    left: 12rem;
+    top: 32rem;
+    padding: 0.5rem 1rem;
+}
+  
 
   .section1 {
     display: flex;
@@ -161,8 +158,8 @@
   .prices {
     position: absolute;
     font-size: 14px;
-    right: 13rem;
-    top: 41rem;
+    right: 17rem;
+    top: 32rem;
   }
   .prices span {
     font-size: 14px;
@@ -174,12 +171,7 @@
     margin-right: -26px;
   }
   .section2 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-top: 33rem;
-    position: relative;
-    font-size: 16px;
+    display: none;
   }
   .informations img {
     position: absolute;

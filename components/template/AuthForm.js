@@ -57,18 +57,28 @@ function AuthForm() {
             </div>
           </div>
         ) : (
-          <button className={styles.btn} onClick={() => setIsOpen(true)}>
-            <span className={styles.user}>
+          <>
+            <button className={styles.btn} onClick={() => setIsOpen(true)}>
+              <span className={styles.user}>
+                <Image
+                  src="/user-tick.png"
+                  alt="torino logo"
+                  width={15}
+                  height={15}
+                  color="#28A745"
+                />
+              </span>
+              ورود | ثبت نام
+            </button>
+            <div className={styles.resLogo} onClick={() => setIsOpen(true)}>
               <Image
-                src="/user-tick.png"
+                src="/sign in buttom (2).png"
                 alt="torino logo"
-                width={15}
-                height={15}
-                color="#28A745"
+                width={40}
+                height={40}
               />
-            </span>
-            ورود | ثبت نام
-          </button>
+            </div>
+          </>
         )}
       </div>
       {step === 1 && (

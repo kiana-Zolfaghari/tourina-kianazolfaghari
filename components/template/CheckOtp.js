@@ -32,19 +32,21 @@ function CheckOtp({ setStep, mobile }) {
   };
 
   return (
-    <div className={styles.form}>
-      <h2>کد تایید را وارد کنید.</h2>
-      <span onClick={() => setStep(1)} className={styles.ex}>
-        مرحله قبل
-      </span>
-      <label>کد تایید به شماره {mobile} ارسال شد</label>
-      <InputOtp
-        value={code}
-        onChange={(e) => setCode(e.value)}
-        length={6}
-        style={{ direction: "ltr", justifyContent: "flex-start" }}
-      />
-      <button onClick={login}> ورود به تورینو </button>
+    <div style={{ maxWidth: "1200px", margin: "auto" }}>
+      <div className={styles.form}>
+        <h2>کد تایید را وارد کنید.</h2>
+        <span onClick={() => setStep(1)} className={styles.ex}>
+          مرحله قبل
+        </span>
+        <label>کد تایید به شماره {mobile} ارسال شد</label>
+        <InputOtp
+          value={code}
+          onChange={(e) => setCode(e.value)}
+          length={6}
+          style={{ direction: "ltr", justifyContent: "flex-start" }}
+        />
+        <button onClick={login}> ورود به تورینو </button>
+      </div>
     </div>
   );
 }

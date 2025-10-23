@@ -66,14 +66,13 @@
 }
 @media (max-width: 400px) {
   .dropcontainer {
-    display: flex;
-    margin-right: 30px;
     border: #828282 solid .5px;
-    width: 100%;
-    align-items: center;
-    font-size: 20px;
-    height: 47px;
-    border-radius: 10px;
-    justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      height: 47px;
+      border-radius: 10px;
+      justify-content: center;
+      margin-top: 10px;
+      padding: 0 20px;
   }
   }

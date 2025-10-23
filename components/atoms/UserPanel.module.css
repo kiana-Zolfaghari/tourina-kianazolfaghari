@@ -32,3 +32,25 @@
 .logOut{
   color: red !important;
 }
+@media (max-width: 400px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 3rem;
+    left: 0;
+    background-color: #ffff;
+    border: solid 1px #d8d8dd;
+    border-radius: 10px;
+    width: 46%;
+    z-index: 40;
+    animation: zoomInDown 0.3s ease-out forwards;
+  }
+  .container div{
+    font-size: 12px;
+  }
+  }
+  

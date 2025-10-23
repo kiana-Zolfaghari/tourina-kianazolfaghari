@@ -3,34 +3,44 @@ import Link from "next/link";
 import styles from "./Layout.module.css";
 
 import AuthForm from "../template/AuthForm";
+import SideBarMenue from "../partials/provider/SideBarMenue";
+import { useState } from "react";
 
 function Layout({ children }) {
+  const [open, setOpen] = useState(false);
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <Link href="/">
-          <Image
-            className={styles.image}
-            src="/TorinoLogo.png"
-            alt="torino logo"
-            width={146}
-            height={44}
-          />
-        </Link>
+        <Image
+          onClick={() => setOpen((prev) => !prev)}
+          className={styles.hamburger}
+          src="/Group 46 (2).png"
+          alt="torino logo"
+          width={26}
+          height={26}
+        />
+        <Image
+          className={styles.image}
+          src="/TorinoLogo.png"
+          alt="torino logo"
+          width={146}
+          height={44}
+        />
         <div className={styles.navbar}>
           <ul>
             <li className={styles.home}>صفحه اصلی</li>
             <li>
-              <Link href="/home#allTours">خدمات گردشگری </Link>
+              <Link href="/home#allTours">خدمات گردشگری</Link>
             </li>
             <li>
               <Link href="/home#aboutUs">درباره ما</Link>
             </li>
             <li>
-              <Link href="/home#buywithphon"> تماس با ما </Link>{" "}
+              <Link href="/home#buywithphon">تماس با ما</Link>
             </li>
           </ul>
         </div>
+        {open && <SideBarMenue setOpen={setOpen} />}
         <AuthForm />
       </header>
       <hr className={styles.hr} />
@@ -66,7 +76,7 @@ function Layout({ children }) {
           </div>
         </div>
         <div className={styles.phone}>
-          <p className={styles.p}>
+          <p className={styles.p1}>
             تلفن پشتیبانی: <span>021-8574</span>
           </p>
         </div>

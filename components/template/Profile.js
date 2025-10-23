@@ -42,7 +42,7 @@ function Profile({ profiledData, getPrifileData }) {
   };
 
   return (
-    <div>
+    <div style={{ maxWidth: "1200px", margin: "auto" }}>
       <NavBox />
       <section className={styles.section1}>
         {isEdit && (
